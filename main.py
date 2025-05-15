@@ -663,10 +663,12 @@ def delete_db():
 
 
 @app.route("/teacher/download/db")
-def delete_db():
+def download_db():
     if not session.get("is_admin"):
         return redirect("/")
     return send_file('olympiad.db', as_attachment=True)
+
+
 
 
 if __name__ == "__main__":
